@@ -8,8 +8,11 @@ public:
     string();
     string(const string &);
     string(const char *);
-    const char* _data() const;
-
+    const char *_data() const;
+    string     &operator=(const char *rhs);
+    string     &operator=(const string &rhs);
+    size_t      size() const;
+    char       &operator[](size_t index) const;
 private:
     char *data;
 };

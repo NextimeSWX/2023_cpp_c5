@@ -1,7 +1,20 @@
-#include "stu.hpp"
 #include <iostream>
+#include "stu.hpp"
 
-int main() {
-    stu::string objet1{"Bonjour"};
-    std::cout << objet1 << "\n";
+void print_with_iter(const stu::string &str)
+{
+	auto iter{str.begin()};
+
+	while (iter != str.end()) {
+		std::cout << *iter;
+		iter += 1;
+	}
+	std::cout << "\n";
+}
+
+int main(void)
+{
+	stu::string str("hello");
+
+	print_with_iter(str);
 }
