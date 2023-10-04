@@ -1,5 +1,5 @@
+#include <iterator>
 #include "stu.hpp"
-#include <iostream>
 #include <cstring>
 
 stu::string::string()
@@ -19,7 +19,14 @@ stu::string::string(const char *other)
     std::strcpy(data, other);
 }
 
-void stu::string::dump()
+const char* stu::string::_data() const
 {
-    std::cout << data << std::endl;
+    return data;
 }
+
+std::ostream &operator<<(std::ostream &out, const stu::string &str)
+{
+    out << str._data();
+    return out;
+}
+
