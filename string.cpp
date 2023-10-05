@@ -1,6 +1,6 @@
+#include "string.hpp"
 #include <cstring>
 #include <iterator>
-#include "stu.hpp"
 
 namespace stu {
 string::string()
