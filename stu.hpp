@@ -13,6 +13,7 @@ public:
     string     &operator=(const string &rhs);
     size_t      size() const;
     char       &operator[](size_t index) const;
+
 private:
     char *data;
 };
