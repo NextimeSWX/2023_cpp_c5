@@ -1,20 +1,13 @@
 #include <iostream>
 #include "stu.hpp"
 
-void print_with_iter(const stu::string &str)
-{
-    auto iter{str.begin()};
-
-    while (iter != str.end()) {
-        std::cout << *iter;
-        iter += 1;
-    }
-    std::cout << "\n";
-}
-
 int main(void)
 {
-    stu::string str("hello");
+    stu::string str("toto");
+    stu::string str2("tata");
 
-    print_with_iter(str);
+    str2 = str;
+    str  = "hello";
+    std::cout << "should be \"hello\"" << str << "\n";
+    std::cout << "should be \"toto\"" << str2 << "\n";
 }
